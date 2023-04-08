@@ -1,10 +1,8 @@
-from setuptools import setup
-from Cython.Build import cythonize
+from setuptools import setup, find_packages
 
 setup(
+    packages=find_packages(),
     name='getprimes',
-    ext_modules=cythonize("getprimes.py"),
     zip_safe=False,
-    install_requires=['Cython'],
 )
 
